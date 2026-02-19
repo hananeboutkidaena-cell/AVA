@@ -33,7 +33,7 @@ import ear1 from './assets/ear-1.jpg';
 import ear2 from './assets/ear-2.png';
 import ear3 from './assets/ear-3.png';
 import laCambre1 from './assets/la cambre-1.png';
-import commisariat1 from './assets/commisariat1.png';
+import commisariat1 from './assets/Commisariat1.png';
 import commisariat2 from './assets/commisariat2.png';
 import commisariat3 from './assets/commisariat3.png';
 
