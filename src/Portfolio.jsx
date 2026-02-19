@@ -88,22 +88,6 @@ const projects = [
     lieu: "Bruxelles"
   },
   {
-    id: "3b",
-    titre: "Kasimir : Projections",
-    categorie: "art",
-    imageVignette: kasimir1,
-    imageHero: kasimir1,
-    images: [
-      kasimir1,
-      kasimir2,
-      kasimir3
-    ],
-    descriptionLongue: "Artiste: Marin Kasimir\nArchitecte: Patrice Neirinck\n\nDescription du projet: Tel un triptyque, les trois sculptures de l’artiste Marin Kasimir ornent le parvis de la gare de Sint-Niklaas.",
-    slug: "kasimir",
-    date: "2004",
-    lieu: "Sint Niklaas"
-  },
-  {
     id: "3c",
     titre: "The Whirling Ear",
     categorie: "art",
