@@ -1,5 +1,7 @@
-﻿import visualisationsPoster from './assets/video/visualisations-poster.jpg';
+import visualisationsPoster from './assets/video/visualisations-poster.jpg';
 import visualisationsMp4 from './assets/video/visualisations.mp4';
+import visualisations2Poster from './assets/video/visualisations-2-poster.jpg';
+import output2Mp4 from './assets/video/output2.mp4';
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, MapPin, Mail, Phone } from 'lucide-react';
 import logoImg from './assets/logo ava.png';
@@ -43,7 +45,7 @@ import commisariat3 from './assets/commisariat3.png';
 const projects = [
   {
     id: "1",
-    titre: "Le thÃ©Ã¢tre royal de la Monnaie",
+    titre: "Le théâtre royal de la Monnaie",
     categorie: "architecture",
     imageVignette: monnaie1,
     imageHero: monnaie1,
@@ -52,7 +54,7 @@ const projects = [
       monnaie2,
       monnaie3
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage: MinistÃ¨re des Travaux Publics\nAssociation momentanÃ©e: URBAT-A2RC\nAuteurs de projet: Brigitte D'Helft, Marc Libois, Patrice Neirinck, Michel Verliefden\nBET: A2RC, NMSAGried & Partners\nBudget: 27 888 021,54 Eur\nColoriste: Cherton, Marie Dominique\n\nRestructuration du ThÃ©Ã¢tre Royal de la Monnaie comprenant la rÃ©novation et l'extension du bÃ¢timent.",
+    descriptionLongue: "Maître d'ouvrage: Ministère des Travaux Publics\nAssociation momentanée: URBAT-A2RC\nAuteurs de projet: Brigitte D'Helft, Marc Libois, Patrice Neirinck, Michel Verliefden\nBET: A2RC, NMSAGried & Partners\nBudget: 27 888 021,54 Eur\nColoriste: Cherton, Marie Dominique\n\nRestructuration du Théâtre Royal de la Monnaie comprenant la rénovation et l'extension du bâtiment.",
     slug: "maison-l",
     date: "1983-1986",
     lieu: "Bruxelles"
@@ -68,7 +70,7 @@ const projects = [
       elevator2,
       elevator3
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage: MinistÃ¨re des Communications et Infrastructures\nArchitectes: Patrice Neirinck, Fred Smeets, RaphaÃ«l De Meerleer, Isabelle Corten\nColoriste: Marie-Dominique Cherton\nBudget: 991 574,10 Eur\n\nRÃ©alisation dâ€™une passerelle et dâ€™un ascenseur dotÃ© dâ€™un belvÃ©dÃ¨re reliant le haut et le bas de la ville, depuis la place Poolaert jusquâ€™Ã  la place de lâ€™Ã‰pÃ©e dans les Marolles.",
+    descriptionLongue: "Maître d'ouvrage: Ministère des Communications et Infrastructures\nArchitectes: Patrice Neirinck, Fred Smeets, Raphaël De Meerleer, Isabelle Corten\nColoriste: Marie-Dominique Cherton\nBudget: 991 574,10 Eur\n\nRéalisation d’une passerelle et d’un ascenseur doté d’un belvédère reliant le haut et le bas de la ville, depuis la place Poolaert jusqu’à la place de l’Épée dans les Marolles.",
     slug: "place-republique",
     date: "2002",
     lieu: "Bruxelles"
@@ -84,7 +86,7 @@ const projects = [
       porteVoix1,
       porteVoix2
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage: Ville de Bruxelles\nAuteur de projet: Emilio LÃ³pez-Menchero, Patrice Neirinck\nDescription du projet: \nStade: RÃ©alisÃ©\nBudget: 92.132,65",
+    descriptionLongue: "Maître d'ouvrage: Ville de Bruxelles\nAuteur de projet: Emilio López-Menchero, Patrice Neirinck\nDescription du projet: \nStade: Réalisé\nBudget: 92.132,65",
     slug: "installation-lumiere",
     date: "2006",
     lieu: "Bruxelles"
@@ -100,9 +102,9 @@ const projects = [
       ear2,
       ear3
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage: Ville de Bruxelles\nArtiste: Alexander Calder\nArchitecte: Patrice Neirinck\nCollaborateurs: Isabelle Corten, BenoÃ®t Errembault\nBudget: 545.365,75â‚¬\n\nConÃ§ue par Calder pour le pavillon amÃ©ricain de l'Expo 1958, The Whirling Ear Ã©tait installÃ©e dans un bassin elliptique dont les jets d'eau faisaient tourner la partie supÃ©rieure.\nAprÃ¨s l'exposition, l'Å“uvre est restÃ©e 10 ans dans le bassin sans entretien.\nSon implantation entre la place Royale, les musÃ©es et le Mont des Arts est un acte symbolique.",
+    descriptionLongue: "Maître d'ouvrage: Ville de Bruxelles\nArtiste: Alexander Calder\nArchitecte: Patrice Neirinck\nCollaborateurs: Isabelle Corten, Benoît Errembault\nBudget: 545.365,75€\n\nConçue par Calder pour le pavillon américain de l'Expo 1958, The Whirling Ear était installée dans un bassin elliptique dont les jets d'eau faisaient tourner la partie supérieure.\nAprès l'exposition, l'œuvre est restée 10 ans dans le bassin sans entretien.\nSon implantation entre la place Royale, les musées et le Mont des Arts est un acte symbolique.",
     slug: "ear",
-    date: "1997â€“2000",
+    date: "1997–2000",
     lieu: "Bruxelles"
   },
   {
@@ -114,7 +116,7 @@ const projects = [
     images: [
       laCambre1
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage: Fonds des bÃ¢timents scolaires\nActeur de projet: Patrice Neirinck, Francois Thiry, Frederic Smeets\nBudget prÃ©visionnel: 5949444.59â‚¬\nSurface: 5000mÂ²\n\nAvant projet de relocalisation de l'institut SupÃ©rieur d'architecture de la CommunautÃ© Francaise (ISAF-La Cambre Architecture) dans l'ancien batiment de l'institut National de Radioffusion (INR) construit en 1936 par Joseph Diongre, place Flagey Ixelles",
+    descriptionLongue: "Maître d'ouvrage: Fonds des bâtiments scolaires\nActeur de projet: Patrice Neirinck, Francois Thiry, Frederic Smeets\nBudget prévisionnel: 5949444.59€\nSurface: 5000m²\n\nAvant projet de relocalisation de l'institut Supérieur d'architecture de la Communauté Francaise (ISAF-La Cambre Architecture) dans l'ancien batiment de l'institut National de Radioffusion (INR) construit en 1936 par Joseph Diongre, place Flagey Ixelles",
     slug: "bureaux-technopole",
     date: "2023",
     lieu: "Toulouse, France"
@@ -130,7 +132,7 @@ const projects = [
       hectolitre2,
       hectolitre3
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage: Bruxelloise de RÃ©novation\nMaÃ®tre d'ouvrage dÃ©lÃ©guÃ©: SociÃ©tÃ© de dÃ©veloppement rÃ©gional de Bruxelles\nArchitectes: Patrice Neirinck, FrÃ©dÃ©ric Vanhove\nBudget: 2 974 722,30 Eur\nSurface: 4800 m2\nImages: Agaajani Shahram",
+    descriptionLongue: "Maître d'ouvrage: Bruxelloise de Rénovation\nMaître d'ouvrage délégué: Société de développement régional de Bruxelles\nArchitectes: Patrice Neirinck, Frédéric Vanhove\nBudget: 2 974 722,30 Eur\nSurface: 4800 m2\nImages: Agaajani Shahram",
     slug: "villa-moderne",
     date: "2002",
     lieu: "Rue de l'Hectolitre et de la Plume, Bruxelles"
@@ -146,7 +148,7 @@ const projects = [
       vanthiel2,
       vanthiel3
     ],
-    descriptionLongue: "Commanditaire: M. Van Thiel\nArchitectes: Patrice Neirinck, Vincent Szpirer, Jean-Charles De Groote\nBudget: 247 893,52 Eur\nSurfaces: 300 mÂ²\n\nRÃ©alisation d'une maison unifamiliale Ã  Uccle",
+    descriptionLongue: "Commanditaire: M. Van Thiel\nArchitectes: Patrice Neirinck, Vincent Szpirer, Jean-Charles De Groote\nBudget: 247 893,52 Eur\nSurfaces: 300 m²\n\nRéalisation d'une maison unifamiliale à Uccle",
     slug: "van-thiel",
     date: "1998",
     lieu: "Bruxelles"
@@ -162,7 +164,7 @@ const projects = [
       couronne2,
       couronne3
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage en association momentanÃ©e: BPI Batipont immobilier SA / Immomills L. De Waele Development SA\nArchitectes: Patrice Neirinck, Frederic Delarge, Jean-Charles De Groote, Frederic Van Hove, Jo Bitoun\nBudget: 15 741 238,82 Eur (+14 873 611,49 Eur)\nSurface: 23.000 m2 (+20.000m2)\n\nRÃ©alisation de logements et de bureaux sur le site de l'ancien hÃ´pital militaire, avenue de la Couronne, Ã  Ixelles.",
+    descriptionLongue: "Maître d'ouvrage en association momentanée: BPI Batipont immobilier SA / Immomills L. De Waele Development SA\nArchitectes: Patrice Neirinck, Frederic Delarge, Jean-Charles De Groote, Frederic Van Hove, Jo Bitoun\nBudget: 15 741 238,82 Eur (+14 873 611,49 Eur)\nSurface: 23.000 m2 (+20.000m2)\n\nRéalisation de logements et de bureaux sur le site de l'ancien hôpital militaire, avenue de la Couronne, à Ixelles.",
     slug: "couronne",
     date: "2002",
     lieu: "Bruxelles"
@@ -178,14 +180,14 @@ const projects = [
       commisariat1,
       commisariat2
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage: Ville de Bruxelles\nMaÃ®tre d'ouvrage dÃ©lÃ©guÃ©: SociÃ©tÃ© de dÃ©veloppement rÃ©gional de Bruxelles\nArchitectes: Patrice Neirinck, FrÃ©dÃ©ric Van Hove, Thierry Calcus\nColoriste: Marie-Dominique Cherton\nBudget: 1 412 993,09 Eur\nSurface: 1000 mÂ²\n\nRÃ©alisation d'un commissariat de police rue de l'Hectolitre, dans le quartier des Marolles Ã  Bruxelles.",
+    descriptionLongue: "Maître d'ouvrage: Ville de Bruxelles\nMaître d'ouvrage délégué: Société de développement régional de Bruxelles\nArchitectes: Patrice Neirinck, Frédéric Van Hove, Thierry Calcus\nColoriste: Marie-Dominique Cherton\nBudget: 1 412 993,09 Eur\nSurface: 1000 m²\n\nRéalisation d'un commissariat de police rue de l'Hectolitre, dans le quartier des Marolles à Bruxelles.",
     slug: "commisariat",
     date: "2000",
     lieu: "Bruxelles"
   },
   {
     id: "6",
-    titre: "L'ElÃ©phant de la MÃ©moire",
+    titre: "L'Eléphant de la Mémoire",
     categorie: "espace-public",
     imageVignette: elephant1,
     imageHero: elephant1,
@@ -194,7 +196,7 @@ const projects = [
       elephant2,
       elephant3
     ],
-    descriptionLongue: "MaÃ®tre d'ouvrage: DÃ©partement du Nord\nAuteurs: Patrice Nierinck\nAssociation momentanÃ©e: M.D. Cherton â€“ JC Huet\navec la participation dâ€™ABCD et de OTH-LIne.\nBudget: 10 411 152,80 Eur\n\nReconstitution de lâ€™Ã‰lÃ©phant de la Bastille pour le bicentenaire de la RÃ©volution FranÃ§aise.\nCette animation itinÃ©rante et pÃ©dagogique circula dÃ¨s le mois de juin 1989 dans les villes du nord de la France, de Paris et de Bruxelles.",
+    descriptionLongue: "Maître d'ouvrage: Département du Nord\nAuteurs: Patrice Nierinck\nAssociation momentanée: M.D. Cherton – JC Huet\navec la participation d’ABCD et de OTH-LIne.\nBudget: 10 411 152,80 Eur\n\nReconstitution de l’Éléphant de la Bastille pour le bicentenaire de la Révolution Française.\nCette animation itinérante et pédagogique circula dès le mois de juin 1989 dans les villes du nord de la France, de Paris et de Bruxelles.",
     slug: "jardin-partage",
     date: "1989",
     lieu: "France"
@@ -453,9 +455,9 @@ const ProjectDetail = ({ slug, navigate }) => {
   if (!project) {
     return (
       <div className="container" style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-        <h2>Projet non trouvÃ©</h2>
+        <h2>Projet non trouvé</h2>
         <button className="back-button" onClick={() => navigate('/')}>
-          Retour Ã  l'accueil
+          Retour à l'accueil
         </button>
       </div>
     );
@@ -517,7 +519,7 @@ const ProjectDetail = ({ slug, navigate }) => {
               ) : project.slug === 'kasimir' ? (
                 <span>Sint Niklaas, 2004</span>
               ) : project.slug === 'ear' ? (
-                <span>Bruxelles, 1997â€“2000</span>
+                <span>Bruxelles, 1997–2000</span>
               ) : project.slug === 'place-republique' ? (
                 <span>Bruxelles, 2002</span>
               ) : project.slug === 'jardin-partage' ? (
@@ -525,7 +527,7 @@ const ProjectDetail = ({ slug, navigate }) => {
               ) : (
                 <>
                   <span>{project.date}</span>
-                  <span>â€¢</span>
+                  <span>•</span>
                   <span>{project.lieu}</span>
                 </>
               )}
@@ -534,10 +536,10 @@ const ProjectDetail = ({ slug, navigate }) => {
             <div className="project-description">
               <p>{project.descriptionLongue.split('\n').map((line, idx) => {
                 const isLabel = [
-                  'MaÃ®tre d\'ouvrage:',
-                  'MaÃ®tre dâ€™ouvrage:',
-                  'Association momentanÃ©e:',
-                  'Association momentanÃ©:',
+                  'Maître d\'ouvrage:',
+                  'Maître d’ouvrage:',
+                  'Association momentanée:',
+                  'Association momentané:',
                   'Auteurs de projet:',
                   'Auteur de projet:',
                   'Description du projet:',
@@ -547,17 +549,17 @@ const ProjectDetail = ({ slug, navigate }) => {
                   'Budget:',
                   'Coloriste:',
                   'Collaborateurs:',
-                  'MaÃ®tre d\'ouvrage dÃ©lÃ©guÃ©:',
+                  'Maître d\'ouvrage délégué:',
                   'Architectes:',
                   'Surface:',
                   'Images:',
                   'Commanditaire:',
                   'Surfaces:',
-                  'MaÃ®tre d\'ouvrage en association momentanÃ©e:',
+                  'Maître d\'ouvrage en association momentanée:',
                   'Artiste:',
                   'Architecte:',
                   'Acteur de projet:',
-                  'Budget prÃ©visionnel:',
+                  'Budget prévisionnel:',
                   'Execution:'
                 ].some(label => line.trim().startsWith(label));
                 if (line.trim() === '') {
@@ -567,7 +569,7 @@ const ProjectDetail = ({ slug, navigate }) => {
                   <div key={idx} style={{display: 'flex', gap: '0.5rem', alignItems: 'flex-start'}}>
                     {isLabel ? (
                       <>
-                        <span style={{color: '#555', fontSize: '0.75em', marginTop: '0.3rem'}}>â€¢</span>
+                        <span style={{color: '#555', fontSize: '0.75em', marginTop: '0.3rem'}}>•</span>
                           <span>
                             <strong style={{color: '#1a1a1a', fontWeight: '600'}}>
                               {line.substring(0, line.indexOf(':') + 1)}
@@ -627,7 +629,23 @@ const Visualisations3DSection = () => {
           <source src={visualisationsMp4} type="video/mp4" />
         </video>
       </div>
-    </section>
+
+      
+      <div className="visualisations-video-wrap second">
+        <video
+          className="visualisations-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={visualisations2Poster}
+        >
+          <source src={output2Mp4} type="video/mp4" />
+        </video>
+      </div>
+
+      </section>
   );
 };
 // ============= CONTACT SECTION =============
@@ -647,7 +665,7 @@ const ContactSection = () => {
                   2 rue du Magistrat
                   <br className="address-break" />
                   <span className="address-sep">, </span>
-                  1050 Bruxelles, 9e Ã©tage
+                  1050 Bruxelles, 9e étage
                 </p>
               </div>
             </div>
@@ -671,7 +689,7 @@ const ContactSection = () => {
             <div className="contact-item">
               <Phone size={24} />
               <div>
-                <h3>TÃ©lÃ©phone</h3>
+                <h3>Téléphone</h3>
                 <a href="tel:+3225380442">+32 2 538 04 42</a>
               </div>
             </div>
@@ -1313,6 +1331,11 @@ export default function App() {
                 padding: 6rem 0;
                 background: #fff;
               }
+              /* ===== 3D & VISUALISATIONS SECTION ===== */
+              .visualisations-section {
+                padding: 6rem 0;
+                background: #fff;
+              }
 
               .visualisations-video-wrap {
                 width: 100%;
@@ -1630,9 +1653,9 @@ export default function App() {
               <ProjectDetail slug={projectSlug} navigate={navigate} />
             ) : (
               <div className="container" style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-                <h2>Page non trouvÃ©e</h2>
+                <h2>Page non trouvée</h2>
                 <button className="back-button" onClick={() => navigate('/')}>
-                  Retour Ã  l'accueil
+                  Retour à l'accueil
                 </button>
               </div>
             )}
